@@ -33,7 +33,7 @@ AI Doctor Assistance is a comprehensive healthcare platform designed specificall
 
 ## 🚀 Live Demo
 
-**Visit the platform**: [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance/)
+**Visit the platform**: [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance-82/)
 
 ## 🛠️ Tech Stack
 
