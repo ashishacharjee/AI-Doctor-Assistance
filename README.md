@@ -1,11 +1,6 @@
 # AI Doctor Assistance Platform
 
 *Advanced AI-powered healthcare platform for India*
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge)](https://ashishacharjee.github.io/AI-Doctor-Assistance-82/)
-[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![Powered by AI](https://img.shields.io/badge/Powered%20by-AI-green?style=for-the-badge)](https://sdk.vercel.ai)
-
 ## 🩺 Overview
 
 AI Doctor Assistance is a comprehensive healthcare platform designed specifically for India, providing 24/7 medical guidance through advanced AI technology. The platform offers symptom analysis, medicine identification, and location-based doctor recommendations.
@@ -38,7 +33,7 @@ AI Doctor Assistance is a comprehensive healthcare platform designed specificall
 
 ## 🚀 Live Demo
 
-**Visit the platform**: [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance-82/)
+**Visit the platform**: [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance/)
 
 ## 🛠️ Tech Stack
 
