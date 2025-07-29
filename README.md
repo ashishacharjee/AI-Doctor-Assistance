@@ -1,142 +1,147 @@
-# AI Doctor Assistance Platform
+# AI Doctor Assistance
 
-*Advanced AI-powered healthcare platform for India*
+*Empowering healthcare access in India through AI.*
+
 ## 🩺 Overview
 
-AI Doctor Assistance is a comprehensive healthcare platform designed specifically for India, providing 24/7 medical guidance through advanced AI technology. The platform offers symptom analysis, medicine identification, and location-based doctor recommendations.
-
-## ✨ Key Features
-
-### 🔍 **Smart Symptom Analysis**
-- Text, voice, and image-based symptom input
-- AI-powered condition suggestions
-- Instant medical guidance
-- Multi-language support (Hindi, Bengali, etc.)
-
-### 💊 **Live Medicine Scanner**
-- Real-time camera medicine identification
-- OCR technology for prescription reading
-- Comprehensive Indian medicine database
-- Dosage and side effect information
-
-### 👨‍⚕️ **Location-Based Doctor Finder**
-- Pincode-specific doctor search
-- Nearby specialists (within 3km)
-- Real hospital integration
-- Appointment booking assistance
-
-### 🎤 **Voice & Camera Integration**
-- Voice-to-text symptom input
-- Live camera scanning
-- Mobile-optimized interface
-- Touch-friendly design
-
-## 🚀 Live Demo
-
-**Visit the platform**: [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance-82/)
-
-## 🛠️ Tech Stack
-
-- **Frontend**: Next.js 15, React 18, TypeScript
-- **Styling**: Tailwind CSS, shadcn/ui
-- **AI Integration**: Advanced AI Models
-- **Camera/OCR**: Web APIs, Image Processing
-- **Voice**: Web Speech API
-- **Database**: SQL with Indian medical data
-- **Deployment**: GitHub Pages
-
-## 📱 Mobile-First Design
-
-Optimized for Indian smartphone users with:
-- Responsive design for all screen sizes
-- Touch-friendly interface
-- Fast loading on slow networks
-- Offline capabilities
-- Camera and microphone integration
-
-## 🇮🇳 India-Specific Features
-
-- **Currency**: All prices in INR (₹)
-- **Emergency**: Indian ambulance numbers (102/108)
-- **Locations**: Pincode-based search
-- **Languages**: Hindi, Bengali, Marathi support
-- **Medicines**: Indian pharmaceutical database
-- **Hospitals**: Integration with Indian healthcare system
-
-## 🔒 Security & Privacy
-
-- End-to-end encryption
-- HIPAA-compliant security
-- Privacy-first approach
-- Secure data handling
-- No personal data storage
-
-## 📋 Usage
-1. **Symptom Check**: Enter symptoms via text, voice, or camera
-2. **Medicine Scan**: Use live camera to identify medicines
-3. **Find Doctors**: Search by location and specialty
-4. **Get Guidance**: Receive AI-powered medical recommendations
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ installed
-- Modern web browser with camera/microphone support
-
-### Installation
-\`\`\`bash
-# Clone the repository
-git clone https://github.com/ashishacharjee/AI-Doctor-Assistance-82.git
-
-# Navigate to project directory
-cd AI-Doctor-Assistance-82
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-\`\`\`
-
-### Deployment
-The project automatically deploys to GitHub Pages when you push to the main branch.
-
-## ⚠️ Medical Disclaimer
-
-This platform is for informational purposes only and should not replace professional medical advice. Always consult qualified healthcare professionals for medical concerns. In emergencies, contact local emergency services immediately.
-
-## 👨‍💻 Developer
-
-**Ashish Chandra Acharjee**  
-B.Tech Student, Guru Nanak Institute of Technology
-
-Passionate about solving real-world problems through AI and technology innovation. Created this platform to improve healthcare accessibility across India.
-
-**Connect**: [LinkedIn](https://www.linkedin.com/in/ashish-chandra-acharjee)
-
-## 📊 Project Stats
-
-- **Launch Year**: 2025
-- **Target Audience**: Indian healthcare seekers
-- **Platform Type**: Progressive Web App (PWA)
-- **Accessibility**: WCAG 2.1 compliant
-- **Performance**: Optimized for mobile networks
-
-## 🤝 Contributing
-
-This project welcomes contributions! Feel free to:
-- Report bugs or issues
-- Suggest new features
-- Improve documentation
-- Submit pull requests
-
-## 📄 License
-
-© 2025 AI Doctor Assistance Platform. All rights reserved.
+**AI Doctor Assistance** is an AI-powered healthcare platform built to provide instant, intelligent, and accessible medical support for users across India. It enables users to analyze symptoms, scan medicines, and locate nearby specialists using text, voice, or image input — all from a single, mobile-friendly interface.
 
 ---
 
-*Built with ❤️ for better healthcare accessibility in India*
+## ✨ Key Features
+
+### 🔍 Symptom Analysis
+
+* Input via text, voice, or camera
+* AI-generated health insights
+* Multi-language support (English, Hindi, Bengali)
+
+### 💊 Medicine Identifier
+
+* Real-time camera-based medicine recognition
+* OCR for prescriptions
+* Access to a vast Indian medicine database
+
+### 🏥 Doctor Finder
+
+* Location-based (PIN code) doctor search
+* Speciality filters
+* Integrated hospital data and maps
+
+### 🎤 Smart Integration
+
+* Voice-to-text for symptom entry
+* Live camera access
+* Designed for mobile-first interaction
+
+---
+
+## 🧠 Tech Stack
+
+* **Frontend**: Next.js 15, React 18, TypeScript
+* **Styling**: Tailwind CSS, Shadcn/UI
+* **AI**: Machine Learning, NLP, Computer Vision
+* **APIs**: Web Speech API, Google Maps API
+* **Backend**: Node.js, Flask, MySQL
+* **Others**: OCR, Camera/Web APIs
+
+---
+
+## 📱 Optimized for India
+
+* Indian currency support (₹)
+* Emergency services: 102/108
+* Pincode-specific doctor listings
+* Medicine data from Indian pharmaceutical sources
+* Language localization (Hindi, Bengali, Marathi)
+
+---
+
+## 🔒 Privacy & Security
+
+* End-to-end encrypted interactions
+* No personal data stored
+* HIPAA-compliant handling
+* Privacy-first architecture
+
+---
+
+## 🚀 How to Use
+
+1. **Symptom Check**: Describe symptoms via text, voice, or image
+2. **Medicine Scan**: Point your camera to detect medicine instantly
+3. **Doctor Finder**: Search local specialists using your PIN code
+4. **Get Recommendations**: AI provides accurate health suggestions instantly
+
+---
+
+## 🧪 Setup & Deployment
+
+### Prerequisites
+
+* Node.js 18+
+* Web browser with camera/microphone access
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/AI-Doctor-Assistance.git
+cd AI-Doctor-Assistance
+npm install
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### GitHub Pages Deployment
+
+* Push to `main` branch with build ready
+* GitHub Pages will auto-deploy from `/` root
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is intended for educational and informational use only. It is not a replacement for professional medical advice, diagnosis, or treatment. Always consult a certified healthcare provider for serious medical concerns. In emergencies, dial India’s helpline numbers: **102** or **108**.
+
+---
+
+## 👨‍💻 Developer
+
+**Ashish Chandra Acharjee**
+B.Tech, Guru Nanak Institute of Technology
+Building AI tools for social impact.
+
+[LinkedIn](https://www.linkedin.com/in/ashish-chandra-acharjee)
+
+---
+
+## 📈 Project Info
+
+* **Launched**: 2025
+* **Type**: PWA (Progressive Web App)
+* **Audience**: Indian citizens needing accessible healthcare
+* **Accessibility**: WCAG 2.1 compliant
+* **Mobile**: Optimized for low bandwidth & responsive across all devices
+
+---
+
+## 🤝 Contributing
+
+You're welcome to contribute!
+Submit issues, suggest features, or open PRs to improve this healthcare tool for India.
+
+---
+
+## 📄 License
+
+© 2025 AI Doctor Assistance
+All rights reserved.
+
+---
+
+## *Built with ❤️ to make healthcare accessible to everyone.*
