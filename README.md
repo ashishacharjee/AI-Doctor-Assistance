@@ -4,7 +4,7 @@ A comprehensive healthcare platform built with Next.js, featuring AI-powered sym
 
 ## 🌟 Live Demo
 
-**🔗 [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance/)**
+**🔗 [https://ashishacharjee.github.io/AI-Doctor-Assistance/](https://ashishacharjee.github.io/AI-Doctor-Assistance/)**
 
 ## ✨ Key Features
 
@@ -157,7 +157,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ashish Chandra Acharjee**
 - 🔗 LinkedIn: [linkedin.com/in/ashish-chandra-acharjee](https://www.linkedin.com/in/ashish-chandra-acharjee)
-- 📧 Email: ashishacharjee@example.com
+- 📧 Email: www.ashishacharjee2@example.com
 - 🌐 Portfolio: 
 
 ## 🙏 Acknowledgments
