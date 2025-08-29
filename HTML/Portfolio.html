@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter (for all text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Reverted to Inter font */
+            background-color: #f8f6f3; /* Light beige background */
+            color: #333;
+        }
+        /* The .text-inter class is no longer strictly necessary as Inter is now the default body font */
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .project-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Card styling consistent with portfolio's About Me section (for contact cards) */
+        .contact-card {
+            @apply bg-white rounded-lg shadow-lg p-8 w-full text-center relative;
+        }
+        .contact-card .icon-circle {
+            @apply absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-4 shadow-md;
+        }
+        /* Button style for external links, matching portfolio's primary button */
+        .btn-external {
+            @apply px-6 py-2 border border-gray-600 text-gray-600 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center justify-center space-x-2;
+        }
+        /* Specific styling for language icons */
+        .language-item {
+            @apply flex items-center justify-center space-x-2 p-2 rounded-md bg-gray-50 text-gray-700 font-medium text-sm;
+        }
+        .language-item i {
+            font-size: 1.25rem; /* Slightly larger icon size */
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header/Navigation -->
+    <header class="bg-white py-6 px-8 md:px-16 lg:px-24 flex justify-between items-center shadow-sm">
+        <div class="text-2xl font-semibold text-gray-800">MY PORTFOLIO</div>
+        <nav>
+            <ul class="flex space-x-8 text-lg font-medium text-gray-600">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#contact-details" class="nav-link">CONTACT</a></li> <!-- Link to new contact details section -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center py-16">
+        <div class="absolute top-0 left-0 w-1/4 h-1/2 bg-gray-200 opacity-50 rounded-br-full -z-10"></div>
+        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center px-4 md:px-8">
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0 relative">
+                <!-- Ensure this image file is in the SAME FOLDER as index.html -->
+                <img src="WhatsApp Image 2025-07-05 at 16.32.23_2132d1cb.jpg" alt="Ashish Chandra Acharjee" class="rounded-lg shadow-lg max-w-full h-auto">
+            </div>
+            <div class="w-full lg:w-1/2 lg:pl-16 text-center lg:text-left">
+                <h1 class="text-5xl font-bold mb-4">Hi!</h1>
+                <h2 class="text-4xl font-semibold mb-6">I'm Ashish Chandra Acharjee</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-xl mx-auto lg:mx-0">
+                    Aspiring Software Developer | B.Tech IT Student | Tech Enthusiast I'm a Computer Science and IT student passionate about building clean, efficient, and purposeful digital solutions. With a strong foundation in Python, SQL, and web development, I've created tools that simplify daily tasks, improve accessibility, and showcase the power of applied tech.
+                </p>
+                <!-- Updated "View Work" to scroll to projects section -->
+                <a href="#projects" class="inline-block px-8 py-3 border border-gray-600 text-gray-600 rounded-full hover:bg-gray-100 transition duration-300">
+                    View Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-5xl font-semibold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: AI Doctor Assistance -->
+                <div class="project-card bg-white rounded-lg p-6 text-center">
+                    <!-- Replace src with your actual image path/URL -->
+                    <img src="https://i.pinimg.com/736x/d5/ce/f9/d5cef98272a7b332452f875a7cf816b9.jpg" alt="AI Doctor Assistance" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">AI Doctor Assistance</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        An AI-based health tool that accepts image, voice, or text input to detect possible illnesses. Includes a medicine checker and nearby doctor suggestion system.
+                        <br><span class="font-medium">Tech: Python, Flask, HTML, CSS, JS</span>
+                    </p>
+                </div>
+                <!-- Project Card 2: Food Ordering System -->
+                <div class="project-card bg-white rounded-lg p-6 text-center">
+                    <!-- Replace src with your actual image path/URL -->
+                    <img src="https://i.pinimg.com/originals/ab/be/71/abbe719f6bd49f7012672cbae8209894.jpg" alt="Food Ordering System" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Food Ordering System</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        A menu-based CLI system to add, update, delete, and search food items. Built with modular functions and integrated MySQL database.
+                        <br><span class="font-medium">Tech: Python, MySQL</span>
+                    </p>
+                </div>
+                <!-- Project Card 3: E-Commerce Website -->
+                <div class="project-card bg-white rounded-lg p-6 text-center">
+                    <!-- Replace src with your actual image path/URL -->
+                    <img src="https://i.pinimg.com/736x/66/35/09/663509c136d014be48eeb54785e1f2ce.jpg" alt="E-Commerce Website" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">E-Commerce Website</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        A full-stack e-commerce web app for browsing, filtering, and purchasing local products. Includes user login, cart system, order tracking, and admin product management.
+                        <br><span class="font-medium">Tech: Django, SQLite, Bootstrap</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-5xl font-semibold text-center mb-12">About Me</h2>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
+                <!-- Education Card -->
+                <div class="bg-white rounded-lg shadow-lg p-8 w-full lg:w-1/2 max-w-2xl text-center relative">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-4 shadow-md">
+                        <img src="https://placehold.co/80x80/E0DED7/333?text=Edu" alt="Education Icon" class="rounded-full">
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4 flex items-center justify-center gap-2">
+                        <i class="fas fa-graduation-cap text-gray-600"></i> EDUCATION
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Completed LKG to Class 7 at Little Diamond English School and Class 7-8 at Don Bosco School, Mizoram consistently scored A grades. Continued Class 9 to 12 (Science stream) at Dooars International Public School, West Bengal. Currently pursuing B.Tech in Information Technology at GuruNanak Institute of Technology
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-8 w-full lg:w-1/2">
+                    <!-- Achievements & Interests Card -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 w-full text-center relative">
+                        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-4 shadow-md">
+                            <img src="https://placehold.co/80x80/E0DED7/333?text=Ach" alt="Achievements Icon" class="rounded-full">
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 flex items-center justify-center gap-2">
+                            <i class="fas fa-trophy text-gray-600"></i> ACHIEVEMENTS & INTERESTS
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Won 2nd place in a school quiz and 1st in a district-level group dance event. Anchored major school functions and secured 1st rank in school in Class 12 IMO. Certified in AWS Technical Essentials and HP's Data Science & Analytics course.
+                        </p>
+                    </div>
+
+                    <!-- Present Focus Card -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 w-full text-center relative">
+                        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-4 shadow-md">
+                            <img src="https://placehold.co/80x80/E0DED7/333?text=Focus" alt="Focus Icon" class="rounded-full">
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 flex items-center justify-center gap-2">
+                            <i class="fas fa-lightbulb text-gray-600"></i> PRESENT FOCUS
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Started coding during school and built my first real project before graduation. Now working on full-stack development using Python, HTML/CSS, SQL, and Django. Passionate about automation, AI tools, and solving real-world problems. Open to internships and team collaborations.
+                        </p>
+                    </div>
+
+                    <!-- Known Languages Card - Updated with logos -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 w-full text-center relative">
+                        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-4 shadow-md">
+                            <i class="fas fa-code text-gray-600 text-4xl"></i> <!-- Generic Code icon for the circle -->
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 flex items-center justify-center gap-2">
+                            <i class="fas fa-laptop-code text-gray-600"></i> KNOWN LANGUAGES
+                        </h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+                            <div class="language-item">
+                                <i class="fab fa-python text-blue-600"></i> <span>Python</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fas fa-database text-gray-600"></i> <span>SQL</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fab fa-html5 text-orange-600"></i> <span>HTML</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fab fa-css3-alt text-blue-500"></i> <span>CSS</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fas fa-c text-blue-800"></i> <span>C</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fab fa-js text-yellow-500"></i> <span>JavaScript</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fas fa-code text-gray-600"></i> <span>C++</span>
+                            </div>
+                            <div class="language-item">
+                                <i class="fab fa-java text-red-600"></i> <span>Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original "Contact" Section - Now just a lead-in to the new contact details section -->
+    <section id="contact-section" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <img src="https://placehold.co/150x150/E0DED7/333?text=Contact+Image" alt="Ready to work with me?" class="rounded-full mx-auto mb-8 shadow-md">
+            <h2 class="text-5xl font-semibold mb-6">Ready to work with me?</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-8 max-w-2xl mx-auto">
+                I'm always open to internships, collaboration, or meaningful tech projects that challenge me to grow. Whether it's building real-world applications, solving problems through code, or contributing to something impactful. I'm ready to give it my best.
+                <br>Let's build something great together.
+            </p>
+            <!-- Updated "Contact" button to scroll to the new contact-details section -->
+            <a href="#contact-details" class="px-8 py-3 border border-gray-600 text-gray-600 rounded-full hover:bg-gray-100 transition duration-300">
+                Contact
+            </a>
+        </div>
+    </section>
+
+    <!-- New Contact Details Section - Moved from contactpage.html -->
+    <section id="contact-details" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-5xl font-semibold text-center mb-12">Get in Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- LinkedIn Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">
+                        <i class="fab fa-linkedin text-gray-600 text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">LinkedIn</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Connect with me professionally on LinkedIn for updates and collaborations.</p>
+                    <a href="https://www.linkedin.com/in/ashish-chandra-acharjee/" target="_blank" class="btn-external">
+                        <i class="fas fa-external-link-alt"></i> <span>Visit Profile</span>
+                    </a>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">
+                        <i class="fab fa-github text-gray-600 text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">GitHub</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Explore my code repositories and contributions to open source projects.</p>
+                    <a href="https://github.com/ashishacharjee" target="_blank" class="btn-external">
+                        <i class="fas fa-external-link-alt"></i> <span>View Repos</span>
+                    </a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-envelope text-gray-600 text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">Email</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">For direct inquiries or detailed discussions, feel free to send me an email.</p>
+                    <a href="mailto:www.acharjeeashish2@gmail.com" class="btn-external">
+                        <i class="fas fa-paper-plane"></i> <span>Send Email</span>
+                    </a>
+                </div>
+
+                <!-- Portfolio/Resume Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-file-alt text-gray-600 text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mt-8 mb-4">Portfolio / Resume</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Download my full resume or explore my comprehensive online portfolio.</p>
+                    <a href="your_resume.pdf" target="_blank" class="btn-external">
+                        <i class="fas fa-download"></i> <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 text-center text-gray-600 text-sm shadow-inner">
+        <p>&copy; 2025 Ashish Chandra Acharjee. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable common developer tool shortcuts
+        document.addEventListener('keydown', function(event) {
+            // F12 key
+            if (event.key === 'F12') {
+                event.preventDefault();
+            }
+            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Windows/Linux)
+            if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) {
+                event.preventDefault();
+            }
+            // Cmd+Option+I, Cmd+Option+J, Cmd+Option+C (Mac)
+            if (event.metaKey && event.altKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) {
+                event.preventDefault();
+            }
+            // Ctrl+U (View Page Source)
+            if (event.ctrlKey && event.key === 'U') {
+                event.preventDefault();
+            }
+            // Cmd+U (View Page Source for Mac)
+            if (event.metaKey && event.key === 'U') {
+                event.preventDefault();
+            }
+        });
+
+        // You can also add a simple check for dev tools opening, though it's less reliable
+        // let devtoolsAreOpen = false;
+        // const threshold = 160; // Adjust as needed
+
+        // const checkDevTools = () => {
+        //     const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        //     const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+
+        //     if (widthThreshold || heightThreshold) {
+        //         if (!devtoolsAreOpen) {
+        //             console.log("Developer tools are open!");
+        //             devtoolsAreOpen = true;
+        //             // You could redirect or show a message here, but it can be intrusive
+        //             // window.location.href = "about:blank"; // Example: redirect to a blank page
+        //         }
+        //     } else {
+        //         devtoolsAreOpen = false;
+        //     }
+        // };
+
+        // // Periodically check for dev tools
+        // setInterval(checkDevTools, 1000); // Check every second
+        // window.addEventListener('resize', checkDevTools); // Check on resize
+    </script>
+</body>
+</html>

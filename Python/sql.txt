@@ -1,0 +1,124 @@
+CREATE DATABASE IF NOT EXISTS onlinefoodorderingsystem;
+USE onlinefoodorderingsystem;
+
+CREATE TABLE IF NOT EXISTS Menu (
+    ItemID INT AUTO_INCREMENT PRIMARY KEY,
+    ItemName VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(10,2),
+    Description TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    ItemID INT,
+    Quantity INT,
+    TotalCost DECIMAL(10,2),
+    OrderTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+);
+
+CREATE TABLE IF NOT EXISTS BillSummary (
+    BillID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerName VARCHAR(100),
+    TotalAmount DECIMAL(10,2),
+    GeneratedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+INSERT INTO Menu (ItemName, Category, Price, Description) VALUES
+('Butter Chicken', 'Indian', 350.00, 'Creamy chicken curry with spices.'),
+('Paneer Butter Masala', 'Indian', 280.00, 'Paneer cubes in a rich tomato gravy.'),
+('Masala Dosa', 'Indian', 150.00, 'Crispy rice crepe with potato filling.'),
+('Biryani (Chicken)', 'Indian', 300.00, 'Aromatic spiced rice with chicken.'),
+('Margherita Pizza', 'Italian', 400.00, 'Classic cheese pizza with basil.'),
+('Alfredo Pasta', 'Italian', 350.00, 'Creamy white sauce pasta.'),
+('Tiramisu', 'Italian', 250.00, 'Coffee-flavored Italian dessert.'),
+('Sushi Platter', 'Japanese', 500.00, 'Assorted sushi with wasabi and soy.'),
+('Caesar Salad', 'Continental', 200.00, 'Crisp lettuce with Caesar dressing.'),
+('BBQ Chicken Wings', 'American', 350.00, 'Spicy grilled chicken wings.'),
+('Chowmin', 'Chinese', 50.00, NULL);
+
+<------->
+
+
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS library_management;
+
+-- Use the newly created database
+USE library_management;
+
+-- Create the Books table
+CREATE TABLE IF NOT EXISTS Books (
+    BookID INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(255) NOT NULL,
+    Author VARCHAR(255) NOT NULL,
+    ISBN VARCHAR(20) UNIQUE NOT NULL,
+    PublicationYear INT,
+    Status VARCHAR(50) DEFAULT 'Available' -- 'Available' or 'Borrowed'
+);
+
+-- Create the Members table
+CREATE TABLE IF NOT EXISTS Members (
+    MemberID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    ContactInfo VARCHAR(255)
+);
+
+-- Create the Borrowings table
+CREATE TABLE IF NOT EXISTS Borrowings (
+    BorrowingID INT AUTO_INCREMENT PRIMARY KEY,
+    BookID INT NOT NULL,
+    MemberID INT NOT NULL,
+    BorrowDate DATE NOT NULL,
+    ReturnDate DATE,
+    FOREIGN KEY (BookID) REFERENCES Books(BookID),
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
+);
+
+
+
+-- Make sure you are using the correct database
+USE library_management;
+
+-- --- Marvel Comics/Graphic Novels ---
+INSERT INTO Books (Title, Author, ISBN, PublicationYear, Status) VALUES
+('Avengers: Endgame - The Official Movie Special', 'Titan Comics', '978-1785869213', 2019, 'Available'),
+('Spider-Man: Into the Spider-Verse - The Art of the Movie', 'Ramin Zahed', '978-1785659463', 2018, 'Available'),
+('Black Panther: A Nation Under Our Feet Book 1', 'Ta-Nehisi Coates', '978-1302900533', 2016, 'Available'),
+('Iron Man: Extremis', 'Warren Ellis', '978-0785116125', 2007, 'Available'),
+('Thor: God of Thunder Vol. 1 - The God Butcher', 'Jason Aaron', '978-1846535301', 2013, 'Available');
+
+-- --- DC Comics/Graphic Novels ---
+INSERT INTO Books (Title, Author, ISBN, PublicationYear, Status) VALUES
+('Batman: The Killing Joke', 'Alan Moore', '978-1401216672', 1988, 'Available'),
+('Superman: Red Son', 'Mark Millar', '978-1401206192', 2003, 'Available'),
+('Wonder Woman: Historia - The Amazons', 'Kelly Sue DeConnick', '978-1779517521', 2021, 'Available'),
+('The Dark Knight Returns', 'Frank Miller', '978-0930289370', 1986, 'Available'),
+('Justice League Vol. 1: Origin', 'Geoff Johns', '978-1401237882', 2012, 'Available');
+
+-- --- Anime/Manga Series ---
+INSERT INTO Books (Title, Author, ISBN, PublicationYear, Status) VALUES
+('Naruto, Vol. 1: Uzumaki Naruto', 'Masashi Kishimoto', '978-1569319001', 2003, 'Available'),
+('Attack on Titan, Vol. 1', 'Hajime Isayama', '978-1612620244', 2012, 'Available'),
+('My Hero Academia, Vol. 1', 'Kohei Horikoshi', '978-1421582696', 2015, 'Available'),
+('One Piece, Vol. 1: Romance Dawn', 'Eiichiro Oda', '978-1569319018', 1999, 'Available'),
+('Fullmetal Alchemist, Vol. 1', 'Hiromu Arakawa', '978-1591169230', 2005, 'Available');
+
+-- --- Harry Potter Series ---
+INSERT INTO Books (Title, Author, ISBN, PublicationYear, Status) VALUES
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', '978-0590353403', 1997, 'Available'),
+('Harry Potter and the Chamber of Secrets', 'J.K. Rowling', '978-0439064866', 1998, 'Available'),
+('Harry Potter and the Prisoner of Azkaban', 'J.K. Rowling', '978-0439136358', 1999, 'Available'),
+('Harry Potter and the Goblet of Fire', 'J.K. Rowling', '978-0439139595', 2000, 'Available'),
+('Harry Potter and the Order of the Phoenix', 'J.K. Rowling', '978-0439358078', 2003, 'Available'),
+('Harry Potter and the Half-Blood Prince', 'J.K. Rowling', '978-0439785969', 2005, 'Available'),
+('Harry Potter and the Deathly Hallows', 'J.K. Rowling', '978-0545010221', 2007, 'Available');
+
+-- You can optionally add a few members to test borrowing
+INSERT INTO Members (Name, ContactInfo) VALUES
+('Riddhi', 'riddhi.s@example.com'),
+('Samriddha', 'samriddha.s@example.com'),
+('Jahanabee', 'jahanabee.g@example.com');
