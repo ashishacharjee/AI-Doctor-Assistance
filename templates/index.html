@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Doctor - Your Virtual Healthcare Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>AI Doctor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="/dashboard" class="nav-link btn-primary">Dashboard</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Your AI-Powered Healthcare Assistant</h1>
+                <p>Get instant medical advice, symptom analysis, and medicine recommendations powered by advanced AI technology and medical expertise.</p>
+                <div class="hero-buttons">
+                    <a href="/symptoms" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        Analyze Symptoms
+                    </a>
+                    <a href="/medicines" class="btn btn-secondary">
+                        <i class="fas fa-pills"></i>
+                        Find Medicines
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="medical-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Comprehensive Healthcare Solutions</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Symptom Analysis</h3>
+                    <p>Advanced AI algorithms analyze your symptoms and provide accurate medical insights with confidence scores.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Medicine Database</h3>
+                    <p>Comprehensive database of medicines with prices, side effects, and availability in Indian pharmacies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Doctor Directory</h3>
+                    <p>Find qualified doctors near you with specialties, ratings, and appointment booking capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>Barcode Scanner</h3>
+                    <p>Scan medicine barcodes to get instant information about dosage, side effects, and interactions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice Input</h3>
+                    <p>Describe your symptoms using voice input for hands-free interaction with the AI assistant.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Medical History</h3>
+                    <p>Track your health consultations and maintain a comprehensive medical history record.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency">
+        <div class="container">
+            <div class="emergency-content">
+                <h2>Emergency Medical Services</h2>
+                <p>In case of medical emergency, contact these numbers immediately:</p>
+                <div class="emergency-numbers">
+                    <div class="emergency-number">
+                        <i class="fas fa-phone"></i>
+                        <span>102 - Medical Emergency</span>
+                    </div>
+                    <div class="emergency-number">
+                        <i class="fas fa-ambulance"></i>
+                        <span>108 - Ambulance Service</span>
+                    </div>
+                    <div class="emergency-number">
+                        <i class="fas fa-hospital"></i>
+                        <span>1066 - National Health Helpline</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About AI Doctor Platform</h2>
+                    <p>Our AI Doctor platform combines cutting-edge artificial intelligence with comprehensive medical knowledge to provide accessible healthcare assistance to everyone.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Advanced symptom analysis using machine learning</li>
+                        <li><i class="fas fa-check"></i> Comprehensive Indian medicine database</li>
+                        <li><i class="fas fa-check"></i> Qualified doctor directory with verified credentials</li>
+                        <li><i class="fas fa-check"></i> Multi-language support for Indian languages</li>
+                        <li><i class="fas fa-check"></i> 24/7 availability for medical consultations</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10,000+</h3>
+                        <p>Medicines in Database</p>
+                    </div>
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Verified Doctors</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Available Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI Doctor</h3>
+                    <p>Your trusted virtual healthcare assistant providing AI-powered medical guidance and support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/symptoms">Symptom Checker</a></li>
+                        <li><a href="/medicines">Medicine Search</a></li>
+                        <li><a href="/doctors">Find Doctors</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency</h4>
+                    <ul>
+                        <li>Medical Emergency: 102</li>
+                        <li>Ambulance: 108</li>
+                        <li>Health Helpline: 1066</li>
+                        <li>Police: 100</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Doctor Platform. All rights reserved.</p>
+                <p><strong>Disclaimer:</strong> This platform provides AI-assisted medical information and should not replace professional medical advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
