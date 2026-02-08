@@ -2,10 +2,6 @@
 
 A comprehensive healthcare platform built with Next.js, featuring AI-powered symptom analysis, live medicine scanning, and location-based doctor recommendations optimized for the Indian healthcare system.
 
-## 🌟 Live Demo
-
-**🔗 [https://ashishacharjee.github.io/AI-Doctor-Assistance-82/](https://ashishacharjee.github.io/AI-Doctor-Assistance-82/)**
-
 ## ✨ Key Features
 
 ### 🤖 **AI-Powered Health Analysis**
@@ -53,8 +49,8 @@ A comprehensive healthcare platform built with Next.js, featuring AI-powered sym
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/ashishacharjee/AI-Doctor-Assistance-82.git
-   cd AI-Doctor-Assistance-82
+   git clone https://github.com/ashishacharjee/AI-Doctor-Assistance.git
+   cd AI-Doctor-Assistance
    \`\`\`
 
 2. **Install dependencies**
@@ -157,8 +153,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ashish Chandra Acharjee**
 - 🔗 LinkedIn: [linkedin.com/in/ashish-chandra-acharjee](https://www.linkedin.com/in/ashish-chandra-acharjee)
-- 📧 Email: ashishacharjee@example.com
-- 🌐 Portfolio: [Your Portfolio URL]
+- 📧 Email: ashishchandraacharjee@gmail.com
+- 🌐 Portfolio: [will be uploaded soon]
 
 ## 🙏 Acknowledgments
 
@@ -203,7 +199,7 @@ This platform is designed to assist with health information but **NEVER replaces
 
 ## 🐛 Bug Reports & Feature Requests
 
-Found a bug or have a feature request? Please create an issue on our [GitHub Issues](https://github.com/ashishacharjee/AI-Doctor-Assistance-82/issues) page.
+Found a bug or have a feature request? Please create an issue on our [GitHub Issues](https://github.com/ashishacharjee/AI-Doctor-Assistance/issues) page.
 
 ## 📞 Support
 
