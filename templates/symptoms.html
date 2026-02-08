@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker - AI Doctor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>AI Doctor</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/symptoms" class="nav-link active">Symptoms</a></li>
+                <li><a href="/medicines" class="nav-link">Medicines</a></li>
+                <li><a href="/doctors" class="nav-link">Doctors</a></li>
+                <li><a href="/dashboard" class="nav-link btn-primary">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Symptom Checker Section -->
+    <section class="symptom-checker">
+        <div class="container">
+            <div class="symptom-header">
+                <h1><i class="fas fa-search-plus"></i> AI Symptom Checker</h1>
+                <p>Describe your symptoms and get AI-powered medical analysis with treatment recommendations.</p>
+            </div>
+
+            <div class="symptom-container">
+                <!-- Input Section -->
+                <div class="symptom-input-section">
+                    <div class="input-methods">
+                        <button class="input-method active" data-method="text">
+                            <i class="fas fa-keyboard"></i>
+                            Text Input
+                        </button>
+                        <button class="input-method" data-method="voice">
+                            <i class="fas fa-microphone"></i>
+                            Voice Input
+                        </button>
+                    </div>
+
+                    <!-- Text Input -->
+                    <div class="input-container" id="text-input">
+                        <textarea 
+                            id="symptoms-text" 
+                            placeholder="Describe your symptoms in detail... (e.g., 'I have fever and headache for 2 days')"
+                            rows="4"
+                        ></textarea>
+                        
+                        <!-- Quick Symptom Buttons -->
+                        <div class="quick-symptoms">
+                            <h4>Quick Symptoms:</h4>
+                            <div class="symptom-buttons">
+                                <button class="symptom-btn" data-symptom="fever and headache">Fever & Headache</button>
+                                <button class="symptom-btn" data-symptom="cough and sore throat">Cough & Sore Throat</button>
+                                <button class="symptom-btn" data-symptom="stomach pain and nausea">Stomach Pain</button>
+                                <button class="symptom-btn" data-symptom="chest pain">Chest Pain</button>
+                                <button class="symptom-btn" data-symptom="back pain">Back Pain</button>
+                                <button class="symptom-btn" data-symptom="dizziness and fatigue">Dizziness</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice Input -->
+                    <div class="input-container hidden" id="voice-input">
+                        <div class="voice-recorder">
+                            <button id="voice-btn" class="voice-button">
+                                <i class="fas fa-microphone"></i>
+                                <span>Click to speak</span>
+                            </button>
+                            <div class="voice-status">
+                                <span id="voice-status">Ready to listen...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="analyze-btn" class="btn btn-primary analyze-btn">
+                        <i class="fas fa-brain"></i>
+                        Analyze Symptoms
+                    </button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="symptom-results" id="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h2><i class="fas fa-clipboard-list"></i> Analysis Results</h2>
+                    </div>
+
+                    <div class="analysis-grid">
+                        <!-- Primary Analysis -->
+                        <div class="analysis-card primary-analysis">
+                            <h3><i class="fas fa-diagnoses"></i> Primary Condition</h3>
+                            <div class="condition-info">
+                                <div class="condition-name" id="condition-name">-</div>
+                                <div class="severity-badge" id="severity-badge">-</div>
+                                <div class="confidence-score">
+                                    <span>Confidence: </span>
+                                    <span id="confidence-score">-</span>%
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Urgency -->
+                        <div class="analysis-card urgency-card">
+                            <h3><i class="fas fa-clock"></i> Urgency Level</h3>
+                            <div class="urgency-info">
+                                <div class="urgency-level" id="urgency-level">-</div>
+                                <div class="urgency-description" id="urgency-description">-</div>
+                            </div>
+                        </div>
+
+                        <!-- Recommended Medicines -->
+                        <div class="analysis-card medicines-card">
+                            <h3><i class="fas fa-pills"></i> Recommended Medicines</h3>
+                            <div class="medicines-list" id="medicines-list">
+                                <p>No medicines recommended yet.</p>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="analysis-card recommendations-card">
+                            <h3><i class="fas fa-lightbulb"></i> Care Recommendations</h3>
+                            <div class="recommendations-list" id="recommendations-list">
+                                <p>No recommendations available yet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Alert -->
+                    <div class="emergency-alert hidden" id="emergency-alert">
+                        <div class="alert-content">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Medical Emergency Detected</h3>
+                            <p>Your symptoms may indicate a medical emergency. Please seek immediate medical attention.</p>
+                            <div class="emergency-numbers">
+                                <a href="tel:102" class="emergency-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call 102
+                                </a>
+                                <a href="tel:108" class="emergency-btn">
+                                    <i class="fas fa-ambulance"></i>
+                                    Call 108
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Disclaimer -->
+    <section class="disclaimer">
+        <div class="container">
+            <div class="disclaimer-content">
+                <h3><i class="fas fa-info-circle"></i> Medical Disclaimer</h3>
+                <p>This AI-powered symptom checker is for informational purposes only and should not replace professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for proper medical evaluation and treatment.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/symptoms.js') }}"></script>
+</body>
+</html>
